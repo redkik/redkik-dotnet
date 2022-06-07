@@ -28,7 +28,7 @@
 1. [Get in touch](https://www.redkik.com/schedule-a-demo/) with us to get your demo login credentials and API keys
 2. Install the library from NuGet
    ```sh
-   PM> Install-Package Redkik.NET
+   PM> Install-Package Redkik
    ```
 
 ### Usage
