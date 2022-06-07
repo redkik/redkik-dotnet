@@ -1,8 +1,9 @@
-name: Build and test
+name: Build, test, and deploy
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - "main"
 
 jobs:
   build:
@@ -25,4 +26,10 @@ jobs:
         run: dotnet build -c Release --no-restore
 
       - name: Test
-        run: dotnet test -c Release --no-build --verbosity normal --filter "Category!=LongRunning"
+        run: dotnet test -c Release --no-restore --no-build --verbosity normal --filter "Category!=LongRunning"
+
+      - name: Pack
+        run: dotnet pack Redkik/Redkik.csproj -c Release --no-restore --no-build --include-symbols -p:SymbolPackageFormat=snupkg -o .
+
+      - name: Push to NuGet
+        run: dotnet nuget push *.nupkg --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}}
