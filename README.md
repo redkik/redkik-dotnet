@@ -1,13 +1,13 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+<div align="center">
+  <img src="https://img.shields.io/github/contributors/redkik/dotnet-redkik.svg?style=for-the-badge" />
+  <img src="https://img.shields.io/github/stars/redkik/dotnet-redkik.svg?style=for-the-badge" />
+  <a href="https://github.com/redkik/dotnet-redkik/issues"><img src="https://img.shields.io/github/issues/redkik/dotnet-redkik.svg?style=for-the-badge" /></a>
+  <a href="https://github.com/redkik/dotnet-redkik/blob/main/LICENSE.txt"><img src="https://img.shields.io/github/license/redkik/dotnet-redkik.svg?style=for-the-badge" /></a>
+</div>
 
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/redkik/dotnet-redkik">
     <img src="https://www.redkik.com/wp-content/uploads/2021/01/redkik-logo.png" alt="Logo" width="250" height="87">
   </a>
 
@@ -55,16 +55,3 @@
    ```c#
    Redkik.Classes.Response<Redkik.Classes.Booking>? booking = await RedkikAPI.PurchaseOffer(offer);
    ```
-
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/dotnet-redkik.svg?style=for-the-badge
-[contributors-url]: https://github.com/redkik/dotnet-redkik/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/redkik/dotnet-redkik.svg?style=for-the-badge
-[forks-url]: https://github.com/redkik/dotnet-redkik/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/dotnet-redkik.svg?style=for-the-badge
-[stars-url]: https://github.com/redkik/dotnet-redkik/stargazers
-[issues-shield]: https://img.shields.io/github/issues/redkik/dotnet-redkik.svg?style=for-the-badge
-[issues-url]: https://github.com/redkik/dotnet-redkik/issues
-[license-shield]: https://img.shields.io/github/license/redkik/dotnet-redkik.svg?style=for-the-badge
-[license-url]: https://github.com/redkik/dotnet-redkik/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/company/redkik/
