@@ -23,7 +23,7 @@ namespace Redkik
         {
             if (client == null)
                 throw new NullReferenceException("Call Initialize function first");
-            HttpResponseMessage response = await client.PostAsJsonAsync("/api/v1/user/Users/login", new LoginRequest(username, password));
+            HttpResponseMessage response = await client.PostAsJsonAsync("/api/v1/user/Users/login", new Login(username, password));
             if (response.IsSuccessStatusCode)
             {
                 token = await response.Content.ReadFromJsonAsync<Token>();
