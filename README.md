@@ -30,28 +30,33 @@
    ```sh
    PM> Install-Package Redkik
    ```
+3. Import the namespaces
+   ```c#
+   using Redkik;
+   using Redkik.Classes;
+   ```
 
 ### Usage
 
 1. Call the initialize function to set the base url
    ```c#
-   Redkik.API.Initialize("https://demo.broker.com");
+   API.Initialize("https://demo.broker.com");
    ```
 2. Login to the service to recieve a token
    ```c#
-   Redkik.Classes.Token? token = await Redkik.API.Login(REDKIK_EMAIL, REDKIK_PASSWORD);
+   Token? token = await API.Login(REDKIK_EMAIL, REDKIK_PASSWORD);
    ```
 3. Get some required data to populate your form
    ```c#
-   List<Redkik.Classes.Commodity>? commodities = await Redkik.API.GetCommodities();
-   List<Redkik.Classes.Country>? countries = await Redkik.API.GetCountries();
+   List<Commodity>? commodities = await API.GetCommodities();
+   List<Country>? countries = await API.GetCountries();
    ```
 4. Collect the information needed for a quote using your preferred method
 5. Submit the quote to recieve offers
    ```c#
-   Redkik.Classes.Response<List<Redkik.Classes.Offer>>? offers = await Redkik.API.GetOffers(payload);
+   Response<List<Offer>>? offers = await API.GetOffers(payload);
    ```
 6. Purchase an offer
    ```c#
-   Redkik.Classes.Response<Redkik.Classes.Booking>? booking = await RedkikAPI.PurchaseOffer(offer);
+   Response<Booking>? booking = await API.PurchaseOffer(offer);
    ```
