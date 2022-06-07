@@ -1,11 +1,11 @@
 ﻿namespace Redkik.Classes
 {
-    public class LoginRequest
+    public class Login
     {
         public string? email { get; set; }
         public string? password { get; set; }
 
-        public LoginRequest(string email, string password)
+        public Login(string email, string password)
         {
             this.email = email;
             this.password = password;

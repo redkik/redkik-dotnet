@@ -5,7 +5,7 @@ namespace Redkik.Helpers
 {
     public class ConsoleHelpers
     {
-        public static Commodity? ReadCommodity(List<Commodity>? commodities)
+        public static Commodity? ReadCommodity(List<Commodity>? commodities, ConsoleColor hintColor = ConsoleColor.DarkGray)
         {
             if (commodities == null)
             {
@@ -46,10 +46,11 @@ namespace Redkik.Helpers
                     commodity = commodities.Find(c => (c.name ?? "").ToLower().Contains(commodityInput.ToLower()));
                     if (commodity != null && commodity.name != null && commodity.name.ToLower() != commodityInput.ToLower())
                     {
-                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        ConsoleColor current = Console.ForegroundColor;
+                        Console.ForegroundColor = hintColor;
                         Console.Write(commodity.name.Substring(commodityInput.Length));
                         Console.Write(" ...Press tab to accept");
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = current;
                     }
                 }
                 info = Console.ReadKey(true);
@@ -58,7 +59,7 @@ namespace Redkik.Helpers
             return commodity;
         }
 
-        public static Country? ReadCountry(List<Country>? countries)
+        public static Country? ReadCountry(List<Country>? countries, ConsoleColor hintColor = ConsoleColor.DarkGray)
         {
             if (countries == null)
             {
@@ -99,10 +100,11 @@ namespace Redkik.Helpers
                     country = countries.Find(c => (c.name ?? "").ToLower().Contains(countryInput.ToLower()));
                     if (country != null && country.name != null && country.name.ToLower() != countryInput.ToLower())
                     {
-                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        ConsoleColor current = Console.ForegroundColor;
+                        Console.ForegroundColor = hintColor;
                         Console.Write(country.name.Substring(countryInput.Length));
                         Console.Write(" ...Press tab to accept");
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = current;
                     }
                 }
                 info = Console.ReadKey(true);

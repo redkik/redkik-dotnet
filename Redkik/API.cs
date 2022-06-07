@@ -23,12 +23,17 @@ namespace Redkik
         {
             if (client == null)
                 throw new NullReferenceException("Call Initialize function first");
-            var loginRequest = new LoginRequest(username, password);
-            HttpResponseMessage response = await client.PostAsJsonAsync("/api/v1/user/Users/login", loginRequest);
-            response.EnsureSuccessStatusCode();
-
-            token = await response.Content.ReadFromJsonAsync<Token>();
-            return token;
+            HttpResponseMessage response = await client.PostAsJsonAsync("/api/v1/user/Users/login", new LoginRequest(username, password));
+            if (response.IsSuccessStatusCode)
+            {
+                token = await response.Content.ReadFromJsonAsync<Token>();
+                return token;
+            }
+            else
+            {
+                ServerError? error = await response.Content.ReadFromJsonAsync<ServerError>();
+                throw new Exception(error?.error?.message == null ? "An unknown error occured" : error.error.message);
+            }
         }
 
         public static async Task<List<Country>?> GetCountries()
@@ -57,7 +62,7 @@ namespace Redkik
             else
             {
                 ServerError? error = await response.Content.ReadFromJsonAsync<ServerError>();
-                throw new Exception(error == null || error.error == null || error.error.message == null ? "An unknown error occured" : error.error.message);
+                throw new Exception(error?.error?.message == null ? "An unknown error occured" : error.error.message);
             }
         }
 
@@ -73,7 +78,7 @@ namespace Redkik
             else
             {
                 ServerError? error = await response.Content.ReadFromJsonAsync<ServerError>();
-                throw new Exception(error == null || error.error.message == null ? "An unknown error occured" : error.error.message);
+                throw new Exception(error?.error?.message == null ? "An unknown error occured" : error.error.message);
             }
         }
     }

@@ -2,3 +2,5 @@ Redkik/bin/
 Redkik/obj/
 RedkikTest/bin/
 RedkikTest/obj/
+.vs/
+.DS_Store
