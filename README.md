@@ -2,7 +2,7 @@
   <img src="https://img.shields.io/github/contributors/redkik/dotnet-redkik.svg?style=for-the-badge" />
   <img src="https://img.shields.io/github/stars/redkik/dotnet-redkik.svg?style=for-the-badge" />
   <a href="https://github.com/redkik/dotnet-redkik/issues"><img src="https://img.shields.io/github/issues/redkik/dotnet-redkik.svg?style=for-the-badge" /></a>
-  <a href="https://github.com/redkik/dotnet-redkik/blob/main/LICENSE.txt"><img src="https://img.shields.io/github/license/redkik/dotnet-redkik.svg?style=for-the-badge" /></a>
+  <a href="https://github.com/redkik/dotnet-redkik/blob/main/LICENSE.txt"><img src="https://img.shields.io/github/license/redkik/dotnet-redkik?style=for-the-badge" /></a>
 </div>
 
 <br />
