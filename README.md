@@ -9,7 +9,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/redkik/dotnet-redkik">
-    <img src="https://www.redkik.com/wp-content/uploads/2021/01/redkik-logo.png" alt="Logo" width="250" height="87">
+    <img src="redkik-logo.png" alt="Logo" width="250" height="87">
   </a>
 
   <h3 align="center">Redkik .NET Wrapper Utilities</h3>
