@@ -1,14 +1,14 @@
 <div align="center">
-  <img src="https://img.shields.io/github/contributors/redkik/dotnet-redkik.svg?style=for-the-badge" />
-  <img src="https://img.shields.io/github/stars/redkik/dotnet-redkik.svg?style=for-the-badge" />
-  <a href="https://github.com/redkik/dotnet-redkik/issues"><img src="https://img.shields.io/github/issues/redkik/dotnet-redkik.svg?style=for-the-badge" /></a>
-  <a href="https://github.com/redkik/dotnet-redkik/blob/main/LICENSE.txt"><img src="https://img.shields.io/github/license/redkik/dotnet-redkik?style=for-the-badge" /></a>
+  <img src="https://img.shields.io/github/contributors/redkik/redkik-dotnet.svg?style=for-the-badge" />
+  <img src="https://img.shields.io/github/stars/redkik/redkik-dotnet.svg?style=for-the-badge" />
+  <a href="https://github.com/redkik/redkik-dotnetk/issues"><img src="https://img.shields.io/github/issues/redkik/redkik-dotnet.svg?style=for-the-badge" /></a>
+  <a href="https://github.com/redkik/redkik-dotnet/blob/main/LICENSE.txt"><img src="https://img.shields.io/github/license/redkik/redkik-dotnet?style=for-the-badge" /></a>
   <a href="https://www.nuget.org/packages/Redkik/"><img src="https://img.shields.io/nuget/v/Redkik?style=for-the-badge" /></a>
 </div>
 
 <br />
 <div align="center">
-  <a href="https://github.com/redkik/dotnet-redkik">
+  <a href="https://github.com/redkik/redkik-dotnet">
     <img src="redkik-logo.png" alt="Logo" width="250" height="87">
   </a>
 
@@ -18,9 +18,9 @@
     A simple wrapper library written in C#.NET6 to easily integrate Redkik's API into your project
     <br />
     <br />
-    <a href="https://github.com/redkik/dotnet-redkik/issues">Report Bug</a>
+    <a href="https://github.com/redkik/redkik-dotnet/issues">Report Bug</a>
     ·
-    <a href="https://github.com/redkik/dotnet-redkik/issues">Request Feature</a>
+    <a href="https://github.com/redkik/redkik-dotnet/issues">Request Feature</a>
   </p>
 </div>
 
