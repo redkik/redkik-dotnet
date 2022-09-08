@@ -99,13 +99,17 @@ try
         string reference = Console.ReadLine() ?? "";
         Console.WriteLine();
 
+        Console.Write("Enter your reference: ");
+        string externalReference = Console.ReadLine() ?? "";
+        Console.WriteLine();
+
         if (commodity != null && country != null)
         {
             Console.WriteLine("Requesting offers...");
             Response<List<Offer>>? offers = await API.GetOffers(new QuotePayload(
                 startTime, endTime, origin, destination, transportType, commodity.id ?? "", commodityDescription, insuredValue, holderType, 
                 holderEmail, holderCompanyName, holderTaxId, holderForname, holderSurname, addressStreet, addressCity, addressState, 
-                addressPostcode, country.id ?? "", reference
+                addressPostcode, country.id ?? "", reference, externalReference
                 ));
             if (offers != null && offers.result != null)
             {
